@@ -12,7 +12,7 @@ font-family: 'Droid Serif', serif;
 body {
   color: #5a5a5a;
   font-family: 'Droid Serif', serif;
-
+  font-size: 16px;
 
 }
 
@@ -83,6 +83,7 @@ input, textarea {
   font-family: 'Oswald', sans-serif;
   display: inline;
   width: 100%;
+  padding: 1px;
 
 }
 
@@ -108,7 +109,15 @@ input, textarea {
     text-shadow: black 0.3em 0.3em 0.3em;
     margin-bottom: 6em;
     box-shadow: 0 8px 6px -6px black;
+    position: relative;
+
+    /* Added to make jumbotron image responsive *******/
+    width:100%;
+    height: 100%;
+    background-size: 100% 100%;
+
 }
+
 
 .jumbo-phone {
   display: block;
@@ -178,6 +187,7 @@ input, textarea {
   text-align: center;
   color: #2f2f35;
   font-size: 2em;
+  margin-bottom: 30px;
 
 }
 
@@ -233,19 +243,6 @@ input, textarea {
 }
 
 
-/*.crop {
-  height: 300px;
-  width: 400px;
-  overflow: hidden;
-}
-
-.crop img {
- height: 250px;
- width: 400px;
-} */
-
-
-
 /* CONTACT FORM ***************************************/
 .contact-form {
   height: 37em;
@@ -255,7 +252,7 @@ input, textarea {
 
 .contact {
   width: 100%;
-
+  background-color: #2f2f35;
 }
 
 
@@ -323,11 +320,47 @@ input, textarea {
   border-radius: 0;
 }
 
+/* Added from ajax-contact-form's CSS file  */
+
+button:hover, button:focus {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+button:active {
+  opacity: 1;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
+}
+
+.success {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.error {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #b94a48;
+  background-color: #f2dede;
+  border: 1px solid rgba(185, 74, 72, 0.3);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
 
 /* FOOTER **********************************************/
 footer {
   background-color: #0e1717;/*#2f2f35;*/
-  height: 38em;
+  height: 33.5em;
   width: 100%;
   color: white;
   text-align: center;
@@ -345,14 +378,14 @@ footer h4 {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 3px;
-  font-size: 10px;
+  font-size: 12px;
   font-family: Lato,"Helvetica Neue",Arial;
   margin: 0;
 }
 
 footer p {
   margin-top: 20px;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 28px;
 }
 
@@ -369,31 +402,187 @@ footer ul {
 }
 
 footer li {
-  font-size: 8px;
+  font-size: 10px;
   line-height: 28px;
 
 }
 
+/* Media Queries ****************************************************************/
 
+/* LARGE PHONES ***************************************/
+@media (min-width: 400px) and (max-width: 767px){
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
-@media (min-width: 768px) and (max-width: 991px) {
 }
 
+/* SMALL DEVICES, TABLETS *****************************/
+@media (min-width: 768px) and (max-width: 991px) {
 
-@media (min-width: 992px) {
+  .jumbotron {
+    height: 20em;
+  }
+
+  .jumbotron h1 {
+    font-size: 40px;
+    margin-top: .5em;
+  }
+
+  .intro {
+    width: 25%;
+  }
+
+  .navbar-nav {
+    float: right;
+
+  }
+
+  .nav li {
+    padding-top: .8em;
+    float: left;
+    display: 0;
+    width: auto;
+    text-transform: uppercase;
+  }
+
+  .navbar-inverse .navbar-nav > li > a {
+    font-size: .8em;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+
+  }
+
+  #top-row p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #featurette1 {
+    height: 32em;
+  }
+
+  .subparagraph {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+  }
+
+  .col-xs-6 {
+    width: 50%;
+
+  }
+
+  .contact {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gallery-section {
+    width: 80%;
+    margin: auto;
+  }
+
+  footer .col-md-3 {
+    display: inline-grid;
+  }
+
+  footer {
+    height: 17em;
+  }
+
+}
+
+/* MEDIUM DEVICES, DESKTOPS ********************************/
+@media (min-width: 992px) and (max-width: 1199px){
+
+  .navbar-nav {
+    float:right;
+    margin-right: -15px;
+  }
+
+  .nav li {
+    padding-top: 1em;
+    float: left;
+    display: 0;
+    width: auto;
+    text-transform: uppercase;
+
+  }
+
+  .navbar-inverse .navbar-nav > li > a {
+    font-size: 1em;
+
+  }
+
+  .jumbotron {
+    height: 25em;
+  }
+
+  .jumbotron h1 {
+    font-size: 3em;
+    margin-top: .5em;
+
+  }
+
+  .jumbotron p {
+    font-size: 1.2em;
+    font-weight: bolder;
+
+  }
+
+  .intro {
+    width: 20%;
+
+  }
+
+
+  .row {
+    height: 30em;
+  }
+
+  #top-row {
+    width: 100%;
+    height: 25em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #top-row p {
+    line-height: 24px;
+    font-size: .9em;
+  }
+
+
+  .col-lg-4 {
+    width: 33%;
+    display: inline-grid;
+  }
+
+  .col-lg-4 img {
+    margin: auto;
+  }
+
+  .gallery-section {
+    width: 80%;
+    margin: auto;
+  }
+
+  .contact-form {
+    width: 30%;
+    margin: auto;
+  }
+
+  footer {
+    height: 17em;
+  }
+}
+
+/*  LARGE DEVICES, WIDE SCREENS ****************************/
+@media (min-width: 1200px) {
   .featurette-heading {
     margin-top: 120px;
   }
-
-  /*.brand-header {
-    color: white;
-    font-size: 1.4em;
-    font-weight: bolder;
-    font-family: 'Oswald', sans-serif;
-  } */
 
   .navbar-nav {
     float:right;
@@ -410,18 +599,16 @@ footer li {
 
   .navbar-inverse .navbar-nav > li > a {
     font-size: 1.2em;
-    color: white;
-    font-family: 'Oswald', sans-serif;
 
   }
 
   .jumbotron {
-    height: 42em;
+    height: 30em;
   }
 
   .jumbotron h1 {
     font-size: 4em;
-    margin-top: 2em;
+    margin-top: 1em;
   }
 
   .jumbotron p {
@@ -491,6 +678,7 @@ footer li {
   .gallery-section {
     display: block;
     overflow: inherit;
+
   }
 
   .col-xs-6 {
@@ -500,15 +688,17 @@ footer li {
   /**********************************************/
 
   .contact-form {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .contact {
     width: 30%;
     margin-left: auto;
     margin-right: auto;
+
+  }
+
+  .contact {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2f2f35;
   }
 
   h2 {

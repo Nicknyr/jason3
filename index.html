@@ -34,6 +34,9 @@
    <!-- NAVBAR
       ================================================== -->
    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+       <div class="container"></div>
+
       <div class="navbar-wrapper">
          <div class="container">
             <nav class="navbar navbar-inverse navbar-static-top">
@@ -43,21 +46,20 @@
                   </div>
                   <div id="navbar" class="navbar-collapse collapse">
                      <ul class="nav navbar-nav">
-                        <li><a href="#">Home</a></li>
                         <li><a href="#featurette1">About</a></li>
-                        <li><a href="#contact-scroll">Contact</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#recent-work">Portfolio</a></li>
                      </ul>
                   </div>
                </div>
             </nav>
          </div>
       </div>
+
       <div class="jumbotron jumbotron-fluid">
-         <div class="container">
             <h1 class="jumboh1">Kinlen Property Maintenance</h1>
             <p class="intro">One call we do it all!</p>
             <h3 class="jumbo-phone">(570) 872-6317</h3>
-         </div>
       </div>
       <!-- Marketing messaging and featurettes
          ================================================== -->
@@ -78,7 +80,7 @@
             </div>
             <!-- /.col-lg-4 -->
             <div class="col-lg-4">
-               <img class="img-circle" src="public/images/shed.jpg" alt="Generic placeholder image" width="140" height="140">
+               <img class="img-circle" src="public/images/gallery/project2.jpg" alt="Generic placeholder image" width="140" height="140">
                <h2>Powerwashing</h2>
                <p>We specialize in powerwashing for both commercial and residential properties. We take pride in restoring homes and commercial buildings back to their former glory.</p>
             </div>
@@ -107,18 +109,11 @@
         <hr class="featurette-divider">
 
 
-    <div class="row gallery-section">
+    <div class="row gallery-section" id="recent-work">
 
     <div class="col-lg-12">
         <h1 id="featurette-heading1">Recent work</h1>
     </div>
-
-    <!-- Example image for gallery
-    <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-        <a class="thumbnail" href="#" data-toggle="lightbox">
-            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-        </a>
-    </div> -->
 
     <div class="col-lg-4 col-md-4 col-xs-6 thumb">
       <div class="crop">
@@ -150,7 +145,7 @@
         <img class="img-responsive" src="public/images/gallery/project4.jpg" alt="Image 4">
       </a>
     </div>
-    </div>
+  </div>
 
     <div class="col-lg-4 col-md-4 col-xs-6 thumb">
       <div class="crop">
@@ -174,54 +169,52 @@
       </div>
       <hr class="featurette-divider">
       <!-- /.container -->
-      <div id="page-wrapper">
-    	  <h1>AJAX Contact Form Demo</h1>
+      <section class="contact" id="contact">
+
+      <div id="page-wrapper" class="contact-form">
+    	  <h2>Contact Us</h2>
 
     	  <div id="form-messages"></div>
 
     		<form id="ajax-contact" method="post" action="mailer.php">
     			<div class="field">
-    				<label for="name">Name:</label>
-    				<input type="text" id="name" name="name" required>
+            <div class="form-group">
+              <label for="name">Name:</label>
+      				<input type="text" id="name" name="name" required>
+            </div>
+    			</div>
+
+          <div class="field">
+            <div class="form-group">
+              <label for="phone">Phone:</label>
+      				<input type="tel" id="phone" name="phone" required>
+            </div>
     			</div>
 
     			<div class="field">
-    				<label for="email">Email:</label>
-    				<input type="email" id="email" name="email" required>
+            <div class="form-group">
+              <label for="email">Email:</label>
+      				<input type="email" id="email" name="email" required>
+            </div>
     			</div>
 
     			<div class="field">
-    				<label for="message">Message:</label>
-    				<textarea id="message" name="message" required></textarea>
+            <div class="form-group">
+              <label for="message">Message:</label>
+      				<textarea id="message" name="message" required></textarea>
+            </div>
     			</div>
 
     			<div class="field">
-    				<button type="submit">Send</button>
+            <div class="button">
+              <button type="submit" class="btn">Send</button>
+            </div>
     			</div>
     		</form>
     	</div>
 
+  </section>
 
-
-            <!--<div class="form-group">
-               <label for="">Full Name</label>
-               <input id="name" type="text" maxlength="50" data-required="true" name="name">
-            </div>
-            <div class="form-group">
-               <label for="">Email</label>
-               <input id="email" type="email" maxlength="70" data-required="true" name="email">
-            </div>
-            <div class="form-group">
-               <label for="">Phone</label>
-               <input id="phone" type="tel" maxlength="10" name="phone">
-            </div>
-            <div class="form-group">
-               <label for="">Message</label>
-               <textarea class="textarea" id="message" data-require="true" name="message" maxlength="1000"></textarea>
-            </div>
-            <div class="button">
-               <input class="btn" type="submit"  value="Submit">
-            </div> -->
 
       <!-- FOOTER -->
       <footer>
