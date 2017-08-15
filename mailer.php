@@ -22,7 +22,7 @@
         }
 
 
-        $recipient = "nick_kinlen@hotmail.com";
+        $recipient = "Jasonkinlen710@gmail.com";
 
         // Set the email subject.
         $subject = "New contact from $name";

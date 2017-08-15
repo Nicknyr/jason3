@@ -360,7 +360,7 @@ button:active {
 /* FOOTER **********************************************/
 footer {
   background-color: #0e1717;/*#2f2f35;*/
-  height: 33.5em;
+  height: 37em;
   width: 100%;
   color: white;
   text-align: center;
@@ -405,6 +405,15 @@ footer li {
   font-size: 10px;
   line-height: 28px;
 
+}
+
+.credit {
+  width: 100%;
+  display: block;
+  font-size: 10px;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  clear: both;
 }
 
 /* Media Queries ****************************************************************/
@@ -487,6 +496,13 @@ footer li {
     width: 40%;
     margin-left: auto;
     margin-right: auto;
+    background-color: #2f2f35;
+
+  }
+
+  #contact {
+    width: 100%;
+
   }
 
   .gallery-section {
@@ -499,7 +515,7 @@ footer li {
   }
 
   footer {
-    height: 17em;
+    height: 20em;
   }
 
 }
@@ -607,7 +623,12 @@ footer li {
   }
 
   footer {
-    height: 17em;
+    height: 20em;
+  }
+
+  .credit {
+    font-size: 12px;
+    padding-bottom: 1em;
   }
 }
 
@@ -744,13 +765,8 @@ footer li {
     text-align: center;
   }
 
-  .featurette-divider {
-    margin: 10px 0;
-
-  }
-
   footer {
-    height: 20em;
+    height: 22em;
   }
 
   footer h4 {
@@ -768,4 +784,9 @@ footer li {
   .footer-content {
     padding-top: 5em;
   }
+}
+
+.credit {
+  font-size: 12px;
+  padding-bottom: 1em;
 }
